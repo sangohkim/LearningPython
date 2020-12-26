@@ -11,6 +11,7 @@ For example, generic numbers, literals expressions, and so on.
         * Binary: Python allows two prefixes, *0b*, *0B*.
         * Octal: *0o*, *0O*
         * Hex: *0x*, *0X*
+        * Conversion: int(S, base), oct(I), hex(I), bin(I)
 2. Floating point  
 Float in Python is similar to *double* in C.
 
