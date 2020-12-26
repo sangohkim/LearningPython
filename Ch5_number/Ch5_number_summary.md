@@ -54,11 +54,46 @@ To make your program not affected by versions, use '//' and set operands always 
 &, |, ^ available
 
 ### Fractions
+> Some example codes about Fraction objects.
+>> This objects are constrained by the floating point hardware performance.
+<pre><code>from fractions import Fraction
+x = Fraction(1, 3)
+y = Fraction(1, 4)     # y = Fraction('.25') = Fraction.from_float(0.25)
+z1 = x + y             # z1 = Fraction(7, 12)
+z2 = x - y             # z2 = Fraction(1, 12)  
+z3 = x * y             # z3 = Fraction(1, 12)
+z4 = x / y             # z4 = Fraction(4, 3)
+z5 = x // y            # z5 = 1
+</code></pre>
+<pre><code>from fractions import Fraction
+z = Fraction(*f.as_integer_ratio(2.5))
+</code></pre>
+
+* *Fraction + integer -> Fraction*
+* *Fraction + float -> float* 
 
 ### Decimal
+> Some example codes about Decimal objects.
+>> This objects are constrained by the floating point harware performance.
+<pre><code>from decimal import Decimal
+x1 = Decimal('0.25')
+x2 = Decimal(0.25)
+x3 = Decimal.from_float(0.25)
+</code></pre>
+
+### Boolean
+> True: 1, False: 0
 
 ### Etc.
 abs, round, floor(math module), sqrt(math module)  
 random(random module)
+
+### Questions
+1. Why?(아래 프로그램에서 정밀도는 4자리까지로 고정되어 있음.)
+    <pre><code> from decimal import Decimal
+    Decimal(0.1) + Decimal(0.1) + Decimal(0.1) - Decimal(0.3)
+    # result: Decimal('1.110E-17')
+    Decimal('0.1') + Decimal('0.1') + Decimal('0.1') - Decimal('0.3')
+    # result: Decimal('0.0')</code></pre>
 
 
